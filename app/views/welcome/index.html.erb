@@ -1,7 +1,15 @@
-<h1>Welcome to Cash Wise</h1>
-<% if user_signed_in? %>
-  <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
+<div class='splash-container'>
+  <h1>Cash Wise</h1>
+  <% if user_signed_in? %>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  <% else %>
+    <div class='auth-links'>
+      <%= link_to new_user_session_path, method: :get do %>
+        <button class='splash-btn'>LOG IN</button>
+      <% end %>
+      <%= link_to new_user_registration_path, method: :get do %>
+        <button class='splash-btn'>SIGN UP</button>
+      <% end %>
+    </div>
+  <% end %>
+</div>
