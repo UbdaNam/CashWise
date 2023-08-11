@@ -4,7 +4,7 @@ RSpec.describe CategoryExpense, type: :model do
   before(:each) do
     @user = User.create(name: 'Abdu', email: 'abdu@gmail.com', password: 'abdu123')
     @expense = Expense.new(name: 'Burger', amount: 2, author_id: subject.id)
-    @category = Category.new(author_id: subject.id, name: 'Shopping', icon: "https://images.freeimages.com/images/large-previews/d2c/water-1182071.jpg")
+    @category = Category.new(author_id: subject.id, name: 'Shopping', icon: 'https://images.freeimages.com/images/large-previews/d2c/water-1182071.jpg')
     @category_expense = CategoryExpense.new(category: @category, expense: @expense)
   end
 

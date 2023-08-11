@@ -6,7 +6,7 @@ RSpec.describe Category, type: :model do
   end
 
   before(:each) do
-    @category = Category.new(author_id: subject.id, name: 'Shopping', icon: "https://images.freeimages.com/images/large-previews/d2c/water-1182071.jpg")
+    @category = Category.new(author_id: subject.id, name: 'Shopping', icon: 'https://images.freeimages.com/images/large-previews/d2c/water-1182071.jpg')
   end
 
   describe 'Testing validations' do
