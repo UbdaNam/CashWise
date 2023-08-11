@@ -4,5 +4,12 @@
      <%= icon('fa-solid', icon_name, class: class_name)%>
     <% end %>
     <h2><%= title %></h2>
+    <% if user_signed_in? %>
+      <%= button_to destroy_user_session_path, method: :delete, :class => 'logout-btn', data: {turbo_confirm: "Are you sure you want to Logout?"} do %>
+        <%= icon('fa-solid', 'arrow-right-from-bracket', class: "logout-icon")%>
+      <% end %>
+    <% end %>
   </nav>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 </header>

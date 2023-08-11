@@ -1,7 +1,7 @@
 <%= render '/shared/nav_bar', title: 'New Transaction', icon_name: 'arrow-left', class_name: 'back-icon'%>
 <div class="form-container flex-column">
   <h2>Add New Transaction</h2>
-  <%= form_with model:  @expense, class: "create_form flex-column" do |form|%>
+  <%= form_with model: @expense, class: "create_form flex-column" do |form|%>
     <% if  @expense.errors.any? %>
       <%  @expense.errors.full_messages.each do |message| %>
         <p><%= message %><p>
@@ -14,6 +14,13 @@
     <div>
       <%= form.number_field :amount, placeholder: "Amount"%>
     </div>
+
+    <% @categories.each do |category| %>
+      <div class='checkbox-list'>
+        <%= check_box_tag "expense[category_ids][]", category.id %>
+        <%= label_tag "expense[category_ids][]", category.name %>
+      </div>
+    <% end %>
 
     <div>
       <%= form.button "Create Transaction", class: "submit-btn"%>

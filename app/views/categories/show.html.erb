@@ -1,32 +1,28 @@
 <div class="expenses-container">
-<%= render '/shared/nav_bar', title: 'Transactions', icon_name: 'arrow-left', class_name: 'back-icon'%>
-  <div class="total-card">
-    <h3>Total</h4>
-    <p>$45</p>
-  </div>
-  <div class="card-container">
-    <div class="card">
-      <div class="card-content">
-        <h4>Mac donalds fastfood</h4>
-        <p>$45</p>
-      </div>
+  <%= render '/shared/nav_bar', title: 'Transactions', icon_name: 'arrow-left', class_name: 'back-icon'%>
+  <% if @expenses.empty? %>
+    <p>No transactions found!</p>
+  <% else %>
+    <div class="total-card">
+      <h3>Total</h4>
+      <p>$<%= @total_amount %></p>
     </div>
-    <div class="card">
-      <div class="card-content">
-        <h4>Mac donalds fastfood</h4>
-        <p>$45</p>
-      </div>
+    <div class="card-container">
+      <% @expenses.each do |expense| %>
+        <div class="card">
+          <div class="card-content">
+            <h4><%= expense.name %></h4>
+            <p>$<%= expense.amount %></p>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <div class="card">
-      <div class="card-content">
-        <h4>Mac donalds fastfood</h4>
-        <p>$45</p>
-      </div>
-    </div>
-  </div>
+  <% end %>
   <div class='btn-container'>
-    <button class="add-btn">
-      Create Transaction
-    </button>
+    <%= link_to new_expense_path do %>
+      <button class="add-btn">
+        Create Transaction
+      </button>
+    <% end %>
   </div>
 </div>

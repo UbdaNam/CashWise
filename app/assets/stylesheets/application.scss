@@ -58,6 +58,10 @@ nav h2 {
   font-size: 1.5rem;
 }
 
+.logout-icon {
+  font-size: 1.3rem;
+}
+
 // Splash page styles
 
 .splash-container {
@@ -195,8 +199,15 @@ nav h2 {
   gap: 0.5rem;
 }
 
-.card > img {
+.img-container {
   max-width: 6rem;
+  max-height: 5rem;
+}
+
+.img-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-content {
@@ -257,4 +268,16 @@ nav h2 {
   border-radius: 7px;
   background-color: var(--secondary-color);
   color: #fff;
+}
+
+.logout-btn {
+  padding: 5px 8px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.check-box-container {
+  display: flex;
+  flex-direction: column;
 }
