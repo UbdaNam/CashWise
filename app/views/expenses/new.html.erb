@@ -14,12 +14,14 @@
     <div>
       <%= form.number_field :amount, placeholder: "Amount"%>
     </div>
-
-    <% @categories.each do |category| %>
-      <div class='checkbox-list'>
-        <%= check_box_tag "expense[category_ids][]", category.id %>
-        <%= label_tag "expense[category_ids][]", category.name %>
-      </div>
+    
+    <% if @categories%>
+      <% @categories.each do |category| %>
+        <div class='checkbox-list'>
+          <%= check_box_tag "expense[category_ids][]", category.id %>
+          <%= label_tag "expense[category_ids][]", category.name %>
+        </div>
+      <% end %>
     <% end %>
 
     <div>
