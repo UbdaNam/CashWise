@@ -11,13 +11,13 @@ class ExpensesController < ApplicationController
     @expense.author = current_user
     p :params
     if @expense.save
-      redirect_to @expense.categories.first, notice: "Transaction created successfully"
+      redirect_to @expense.categories.first, notice: 'Transaction created successfully'
     else
       render :new, status: :unprocessable_entity
     end
   end
 
   def expense_params
-    params.require(:expense).permit(:name, :amount, category_ids:[])
+    params.require(:expense).permit(:name, :amount, category_ids: [])
   end
 end

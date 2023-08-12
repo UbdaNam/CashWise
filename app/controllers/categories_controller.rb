@@ -2,7 +2,9 @@ class CategoriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @categories = current_user.categories.left_outer_joins(:expenses).select('categories.*, SUM(expenses.amount) AS total_amount').group('categories.id')
+    @categories = current_user.categories.left_outer_joins(:expenses)
+      .select('categories.*, SUM(expenses.amount) AS total_amount')
+      .group('categories.id')
   end
 
   def show
