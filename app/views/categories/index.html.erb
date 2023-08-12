@@ -1,0 +1,29 @@
+<div class="categories-container">
+<%= render '/shared/nav_bar', title: 'Categories', icon_name: 'bars', class_name: 'menu-icon'%>
+  <div class="card-container">
+    <% if @categories.empty? %>
+      <p>No categories found!</p>
+    <% else %>
+      <% @categories.each do |category| %>
+        <%=link_to category do %>
+          <div class="card">
+            <div class='img-container'>
+              <img src=<%=category.icon%> alt=<%= category.name %> />
+            </div>
+            <div class="card-content">
+              <h4><%= category.name %></h4>
+              <p>$<%= category.total_amount || 0 %></p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class='btn-container'>
+    <%= link_to new_category_path do %>
+      <button class="add-btn">
+        Create Category
+      </button>
+    <% end %>
+  </div>
+</div>

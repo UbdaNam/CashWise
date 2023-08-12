@@ -1,0 +1,22 @@
+<%= render '/shared/nav_bar', title: 'New Category', icon_name: 'arrow-left', class_name: 'back-icon'%>
+<div class="form-container flex-column">
+  <h2>Add New Category</h2>
+  <%= form_with model: @category, class: "create_form flex-column" do |form|%>
+    <% if @category.errors.any? %>
+      <% @category.errors.full_messages.each do |message| %>
+        <p><%= message %><p>
+      <% end %>
+    <% end %>
+    <div>
+      <%= form.text_field :name, placeholder: "Name" %>
+    </div>
+
+    <div>
+      <%= form.text_field :icon, placeholder: "Icon URL"%>
+    </div>
+
+    <div>
+      <%= form.button "Create Category", class: "submit-btn"%>
+    </div>
+  <% end %>
+</div>

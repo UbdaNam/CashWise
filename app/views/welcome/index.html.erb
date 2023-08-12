@@ -1,0 +1,11 @@
+<div class='splash-container'>
+  <h1>Cash Wise</h1>
+    <div class='auth-links'>
+      <%= link_to new_user_session_path, method: :get do %>
+        <button class='splash-btn'>LOG IN</button>
+      <% end %>
+      <%= link_to new_user_registration_path, method: :get do %>
+        <button class='splash-btn'>SIGN UP</button>
+      <% end %>
+    </div>
+</div>
