@@ -8,7 +8,6 @@
 :root {
   --primary-color: #3778c2;
   --secondary-color: #5fb523;
-
   --text-dark: #434b54;
 }
 
@@ -33,12 +32,6 @@ a {
   flex-direction: column;
 }
 
-#error_explanation h2 {
-  margin-top: 0.3rem;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
 // nav style
 nav {
   display: flex;
@@ -51,6 +44,12 @@ nav {
 nav h2 {
   margin-inline: auto;
   font-weight: 700;
+}
+
+#error_explanation h2 {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .back-icon,
@@ -219,7 +218,7 @@ nav h2 {
 
 .card-content > h4 {
   opacity: 0.5;
-  font-size: 18;
+  font-size: 16px;
 }
 
 .card-content > p {

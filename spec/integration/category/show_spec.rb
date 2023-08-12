@@ -4,7 +4,9 @@ RSpec.describe 'category/show', type: :feature do
   describe 'after log in' do
     before(:each) do
       @user = User.create(name: 'Abdu', email: 'Abdu@gmail.com', password: 'Abdu123', confirmed_at: Time.now)
-      @category1 = Category.create(name: 'Shopping', icon: 'https://media.istockphoto.com/id/1389937723/vector/cartoon-planet-earth-3d-vector-icon-on-white-background.jpg?s=2048x2048&w=is&k=20&c=eOyTJtouj1h2HG9_NhiZfLxzKq4Gp8GNCUlxqVfJMx4=', author_id: @user.id)
+      @category1 = Category.create(name: 'Shopping',
+                                   icon: 'https://media.istockphoto.com/id/1389937723/vector/cartoon-planet-earth-3d-vector-icon-on-white-background.jpg?s=2048x2048&w=is&k=20&c=eOyTJtouj1h2HG9_NhiZfLxzKq4Gp8GNCUlxqVfJMx4=',
+                                   author_id: @user.id)
       @expense = Expense.create(name: 'Electronics', amount: 23, author_id: @user.id, category_ids: [@category1.id])
 
       visit 'users/sign_in'
