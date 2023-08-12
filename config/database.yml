@@ -83,6 +83,4 @@ test:
 #
 production:
   <<: *default
-  database: CashWise_production
-  username: CashWise
-  password: <%= ENV["CASHWISE_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
