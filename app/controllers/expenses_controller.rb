@@ -16,7 +16,7 @@ class ExpensesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-  
+
   private
 
   def expense_params
