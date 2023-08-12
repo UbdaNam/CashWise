@@ -10,6 +10,8 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+  - [🎥 Video description](#video-description)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -47,6 +49,20 @@ Cash Wise is a budget management tool that allows users to track their spending 
 - **Create custom categories**
 - **Create transactions**
 - **Show transaction list for each category**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://cash-wise.onrender.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🎥 Video description <a name="video-description"></a>
+
+- Below is a link to a video that I recorded to walk you through why I did this project and what I learned from doing it.
+
+- [Video Description link](https://www.loom.com/share/4eedc27865ce402c92bcf2d0ab8493f7?sid=ac82cf83-762c-44d0-a320-0f268cc0ab19)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
