@@ -24,7 +24,7 @@ RSpec.describe 'category/index', type: :feature do
       expect(page).to have_button('Create Category')
     end
 
-    it 'should take you to add category form when clicking on the create csategory button' do
+    it 'should take you to add category form when clicking on the create category button' do
       visit 'categories'
       click_link('Create Category')
       expect(current_path).to eql new_category_path
