@@ -1,4 +1,4 @@
-<h2>Resend confirmation instructions</h2>
+<%= render '/shared/nav_bar', title: 'Resend confirmation', icon_name: 'arrow-left', class_name: 'back-icon'%>
 
 <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
